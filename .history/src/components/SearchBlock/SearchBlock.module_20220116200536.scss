@@ -1,0 +1,18 @@
+.headCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .searchBlock {
+    border: 1px solid #f3f3f3;
+    border-radius: 10px;
+    padding: 0 15px;
+    input {
+      border: 0;
+      padding: 14px;
+      font-size: 15px;
+      width: 200px;
+    }
+  }
+}
