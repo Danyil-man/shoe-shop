@@ -13,10 +13,10 @@ const Drawer = ({ closeCart, cartItems }) => {
         </h2>
 
         <div className={style.items}>
-          {cartItems.map((cart) => (
+          {cartItems.map((card) => (
             <CartItem
-              key={cart.card.id}
-              cart={cart}
+              key={card.id}
+              card={card}
               // cartImg={cart.img}
               // cartDescriptin={cart.description}
               // cartPrice={cart.price}

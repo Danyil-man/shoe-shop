@@ -4,7 +4,7 @@ import style from "./Drawe.module.scss";
 import CartItem from "components/Cart";
 
 const Drawer = ({ closeCart, cartItems }) => {
-  console.log("cartITEMS", cartItems);
+  console.log(cartItems);
   return (
     <div className={style.overlay}>
       <div className={style.drawer}>
@@ -15,7 +15,6 @@ const Drawer = ({ closeCart, cartItems }) => {
         <div className={style.items}>
           {cartItems.map((cart) => (
             <CartItem
-              key={cart.card.id}
               cart={cart}
               // cartImg={cart.img}
               // cartDescriptin={cart.description}

@@ -22,9 +22,7 @@ const SearchBlock = () => {
           value={searchValue}
           placeholder="Пошук..."
         />
-        {searchValue ? (
-          <img className={style.clearSearchBtn} src={remove} alt="remove" />
-        ) : null}
+        <img className={style.clearSearchBtn} src={remove} alt="remove" />
       </div>
     </div>
   );

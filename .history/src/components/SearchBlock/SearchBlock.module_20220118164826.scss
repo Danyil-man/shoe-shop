@@ -9,13 +9,13 @@
     border: 1px solid #f3f3f3;
     border-radius: 10px;
     padding: 0 15px;
-    display: flex;
-    align-items: center;
     .clearSearchBtn {
       position: absolute;
-      right: 10px;
-      width: 24px;
-      height: 24px;
+      font-size: 12px;
+      top: 10px;
+      right: 0;
+      width: 14px;
+      height: 14px;
     }
     input {
       border: 0;

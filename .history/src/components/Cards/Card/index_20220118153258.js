@@ -3,7 +3,6 @@ import style from "./Card.module.scss";
 import checkedImg from "img/btnChecked.svg";
 import like from "img/like.svg";
 import add from "img/plus.svg";
-
 const Card = ({ card, onAdd }) => {
   const [checked, setChecked] = useState(false);
 

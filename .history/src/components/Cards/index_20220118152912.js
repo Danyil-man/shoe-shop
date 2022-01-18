@@ -20,12 +20,10 @@ const Cards = ({ setCartItems }) => {
     <div className={style.sneakers__content}>
       {cards.map((card) => (
         <Card
-          key={card.id}
-          card={card}
-          // id={card.id}
-          // img={card.img}
-          // description={card.description}
-          // price={card.price}
+          id={card.id}
+          img={card.img}
+          description={card.description}
+          price={card.price}
           onAdd={onAddToCart}
         />
       ))}

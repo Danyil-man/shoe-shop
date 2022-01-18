@@ -3,16 +3,14 @@ import style from "./Card.module.scss";
 import checkedImg from "img/btnChecked.svg";
 import like from "img/like.svg";
 import add from "img/plus.svg";
-
 const Card = ({ card, onAdd }) => {
   const [checked, setChecked] = useState(false);
 
   const succesfullyAdded = () => {
     onAdd({ card });
     setChecked(true);
-    console.log(card.id);
   };
-
+  console.log(card.id);
   return (
     <div key={card.id} className={style.card}>
       <div className={style.like}>

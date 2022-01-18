@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from "./Cart.module.scss";
 import remove from "img/remove.svg";
 const CartItem = ({ cart }) => {
   return (
-    <div key={cart.card.id} className={style.cartItem}>
-      <img width={90} src={cart.card.img} alt="cartSneakers" />
+    <div key={cart.id} className={style.cartItem}>
+      <img width={90} src={cart.cartImg} alt="cartSneakers" />
       <div className={style.cartDescription}>
-        <p>{cart.card.description}</p>
-        <b>{cart.card.price}$</b>
+        <p>{cart.cartDescriptin}</p>
+        <b>{cart.cartPrice}$</b>
       </div>
       <img className={style.removebtn} src={remove} alt="remove" />
     </div>

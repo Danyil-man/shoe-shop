@@ -21,11 +21,9 @@ const Cards = ({ setCartItems }) => {
       {cards.map((card) => (
         <Card
           key={card.id}
-          card={card}
-          // id={card.id}
-          // img={card.img}
-          // description={card.description}
-          // price={card.price}
+          img={card.img}
+          description={card.description}
+          price={card.price}
           onAdd={onAddToCart}
         />
       ))}

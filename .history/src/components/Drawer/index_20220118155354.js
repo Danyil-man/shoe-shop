@@ -15,7 +15,7 @@ const Drawer = ({ closeCart, cartItems }) => {
         <div className={style.items}>
           {cartItems.map((cart) => (
             <CartItem
-              key={cart.card.id}
+              key={cart.id}
               cart={cart}
               // cartImg={cart.img}
               // cartDescriptin={cart.description}
