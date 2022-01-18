@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shoe-shop/static/css/main.d8b80629.chunk.css",
+    "main.css": "/shoe-shop/static/css/main.2090c320.chunk.css",
     "main.js": "/shoe-shop/static/js/main.46eed9ff.chunk.js",
     "main.js.map": "/shoe-shop/static/js/main.46eed9ff.chunk.js.map",
     "runtime-main.js": "/shoe-shop/static/js/runtime-main.de350395.js",
@@ -8,7 +8,7 @@
     "static/js/2.7eddf68b.chunk.js": "/shoe-shop/static/js/2.7eddf68b.chunk.js",
     "static/js/2.7eddf68b.chunk.js.map": "/shoe-shop/static/js/2.7eddf68b.chunk.js.map",
     "index.html": "/shoe-shop/index.html",
-    "static/css/main.d8b80629.chunk.css.map": "/shoe-shop/static/css/main.d8b80629.chunk.css.map",
+    "static/css/main.2090c320.chunk.css.map": "/shoe-shop/static/css/main.2090c320.chunk.css.map",
     "static/js/2.7eddf68b.chunk.js.LICENSE.txt": "/shoe-shop/static/js/2.7eddf68b.chunk.js.LICENSE.txt",
     "static/media/btnChecked.b9b03b04.svg": "/shoe-shop/static/media/btnChecked.b9b03b04.svg",
     "static/media/cart1.088b5dd7.svg": "/shoe-shop/static/media/cart1.088b5dd7.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.de350395.js",
     "static/js/2.7eddf68b.chunk.js",
-    "static/css/main.d8b80629.chunk.css",
+    "static/css/main.2090c320.chunk.css",
     "static/js/main.46eed9ff.chunk.js"
   ]
 }
