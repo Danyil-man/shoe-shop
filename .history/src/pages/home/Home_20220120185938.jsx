@@ -8,7 +8,6 @@ const Home = ({
   cards,
   setSearchValue,
   cartItems,
-  isLoading,
   setCartItems,
   onAddToCart,
   onAddFavorite,
@@ -20,7 +19,6 @@ const Home = ({
         cards={cards}
         searchValue={searchValue}
         cartItems={cartItems}
-        isLoading={isLoading}
         setCartItems={setCartItems}
         onAddFavorite={onAddFavorite}
         onAddToCart={onAddToCart}

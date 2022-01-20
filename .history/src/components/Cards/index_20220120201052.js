@@ -8,12 +8,13 @@ const Cards = ({
   searchValue,
   onAddFavorite,
   cartItems,
+  added,
 }) => {
   const renderItem = () => {
     const filter = cards.filter((card) =>
       card.description.includes(searchValue)
     );
-    return (isLoading ? [...Array(8)] : filter).map((card) => (
+    return (isLoading ? [...Array(8)] : filter).cards.map((card) => (
       <Card
         card={card}
         isLoading={isLoading}

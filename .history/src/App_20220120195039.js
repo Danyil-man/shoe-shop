@@ -14,12 +14,10 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [favoritesList, setFavoritesList] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      setIsLoading(isLoading); //Loading
-      console.log("firstLoad", isLoading);
       const responseCart = await axios.get(
         "https://61e553d4595afe00176e54fc.mockapi.io/cart"
       );
@@ -31,12 +29,10 @@ const App = () => {
       const responseCards = await axios.get(
         "https://61e553d4595afe00176e54fc.mockapi.io/items"
       );
-      setIsLoading(!isLoading); //Loaded
 
       setCartItems(responseCart.data);
       setFavoritesList(responseFavorites.data);
       setCards(responseCards.data);
-      console.log("secondLoad", isLoading);
     }
     fetchData();
   }, []);
@@ -102,7 +98,6 @@ const App = () => {
             searchValue={searchValue}
             cards={cards}
             cartItems={cartItems}
-            isLoading={isLoading}
             onAddToCart={onAddToCart}
             onAddFavorite={onAddFavorite}
             setCartItems={setCartItems}

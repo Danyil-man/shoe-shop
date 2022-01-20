@@ -10,8 +10,8 @@ const Card = ({
   card,
   onAddToCart,
   onAddFavorite,
-  isLoading,
   added = false,
+  loading = false,
 }) => {
   const [checked, setChecked] = useState(added);
   const [favorite, setFavorite] = useState(false);
@@ -31,7 +31,7 @@ const Card = ({
 
   return (
     <div className={style.card}>
-      {isLoading ? (
+      {loading ? (
         <ContentLoader
           speed={2}
           width={160}
