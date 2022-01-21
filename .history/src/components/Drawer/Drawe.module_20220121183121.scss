@@ -51,10 +51,6 @@
           font-size: 16px;
           transition: 0.2s linear;
           cursor: pointer;
-          &:disabled {
-            background-color: #e3e3e3;
-            cursor: default;
-          }
           &:hover {
             background-color: #87e911;
             img {

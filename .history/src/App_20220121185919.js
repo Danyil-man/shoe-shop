@@ -86,14 +86,7 @@ const App = () => {
 
   return (
     <AppContext.Provider
-      value={{
-        cards,
-        cartItems,
-        favoritesList,
-        isItemAdded,
-        setCart,
-        setCartItems,
-      }}
+      value={{ cards, cartItems, favoritesList, isItemAdded, setCart }}
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
@@ -102,6 +95,7 @@ const App = () => {
               cartItems={cartItems}
               closeCart={() => setCart(false)}
               onRemoveItem={onRemoveItem}
+              setCartItems={setCartItems}
             />
           )}
           <Header openCart={() => setCart(true)} />

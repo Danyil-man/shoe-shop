@@ -14,7 +14,6 @@ const Drawer = ({ closeCart, cartItems, onRemoveItem }) => {
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [orderId, setOrderID] = useState(null);
   const [loading, setLoading] = useState(false);
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const onSubmitOrder = async () => {
     try {
       setLoading(true);
@@ -26,13 +25,11 @@ const Drawer = ({ closeCart, cartItems, onRemoveItem }) => {
       setIsOrderComplete(true);
       state.setCartItems([]);
 
-      for (let i = 0; i < cartItems.length; i++) {
-        const item = cartItems[i];
+      cartItems.forEach((item) => {
         await axios.delete(
           "https://61e553d4595afe00176e54fc.mockapi.io/cart/" + item.id
         );
-        delay(1000);
-      }
+      });
     } catch {
       alert("Не вдалося оформити замовлення");
     }

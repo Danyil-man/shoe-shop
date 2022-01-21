@@ -102,6 +102,7 @@ const App = () => {
               cartItems={cartItems}
               closeCart={() => setCart(false)}
               onRemoveItem={onRemoveItem}
+              setCartItems={setCartItems}
             />
           )}
           <Header openCart={() => setCart(true)} />

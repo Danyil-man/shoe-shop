@@ -1,0 +1,26 @@
+.emptyCartBlock {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    margin-bottom: 20px;
+    width: 120px;
+  }
+  p {
+    opacity: 0.6;
+  }
+  button {
+    width: 245px;
+    height: 55px;
+    background: none;
+    border: none;
+    background-color: #9dd458;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+}
