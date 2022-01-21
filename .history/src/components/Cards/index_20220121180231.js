@@ -8,6 +8,7 @@ const Cards = ({
   onAddToCart,
   searchValue,
   onAddFavorite,
+  cartItems,
 }) => {
   const renderItem = () => {
     const filter = cards.filter((card) =>

@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import style from "./Cards.module.scss";
 import Card from "./Card";
-
+import AppContext from "store/context";
 const Cards = ({
   cards,
   isLoading,
   onAddToCart,
   searchValue,
   onAddFavorite,
+  cartItems,
 }) => {
+  const state = useContext(AppContext);
+
   const renderItem = () => {
     const filter = cards.filter((card) =>
       card.description.includes(searchValue)
@@ -18,6 +21,7 @@ const Cards = ({
       <Card
         card={card}
         isLoading={isLoading}
+        added={state.isItemAdded(card && card.id)}
         onAddToCart={onAddToCart}
         onAddFavorite={onAddFavorite}
       />

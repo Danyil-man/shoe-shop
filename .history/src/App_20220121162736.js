@@ -7,7 +7,8 @@ import Home from "pages/home/Home";
 import { Route } from "react-router-dom";
 import Routing from "Routing";
 import Favorites from "pages/favorites/Favorites";
-import AppContext from "store/context";
+
+const AppContext = createContext({});
 
 const App = () => {
   const [cart, setCart] = useState(false);
@@ -80,14 +81,8 @@ const App = () => {
     }
   };
 
-  const isItemAdded = (id) => {
-    return cartItems.some((item) => item.id === id);
-  };
-
   return (
-    <AppContext.Provider
-      value={{ cards, cartItems, favoritesList, isItemAdded }}
-    >
+    <AppContext.Provider value={{ cards, cartItems, favoritesList }}>
       <div className={style.overlay}>
         <div className={style.wrapper}>
           {cart && (
@@ -100,7 +95,10 @@ const App = () => {
           )}
           <Header openCart={() => setCart(true)} />
           <Route exact path="/shoe-shop/favorite">
-            <Favorites onAddFavorite={onAddFavorite} />
+            <Favorites
+              favoritesList={favoritesList}
+              onAddFavorite={onAddFavorite}
+            />
           </Route>
           <Route exact path="/shoe-shop">
             <Home

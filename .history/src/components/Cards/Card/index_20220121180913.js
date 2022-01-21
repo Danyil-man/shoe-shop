@@ -3,18 +3,29 @@ import style from "./Card.module.scss";
 import ContentLoader from "react-content-loader";
 import checkedImg from "img/btnChecked.svg";
 import like from "img/like.svg";
-import addImg from "img/plus.svg";
+import add from "img/plus.svg";
 import liked from "img/liked.png";
 import AppContext from "store/context";
 
-const Card = ({ card, onAddToCart, onAddFavorite, isLoading }) => {
+const Card = ({
+  card,
+  onAddToCart,
+  onAddFavorite,
+  isLoading,
+  added = false,
+}) => {
+  //const [checked, setChecked] = useState(added);
   const [favorite, setFavorite] = useState(false);
   const state = useContext(AppContext);
 
   const addedToDrawer = () => {
     onAddToCart(card);
+    //setChecked(!checked);
   };
-
+  const removeFromDrawer = () => {
+    //setChecked(!checked);
+    onAddToCart(card);
+  };
   const addedToFavorite = () => {
     onAddFavorite(card);
     setFavorite(!favorite);
@@ -56,12 +67,15 @@ const Card = ({ card, onAddToCart, onAddFavorite, isLoading }) => {
                 Ціна: <b>{card.price}$</b>
               </p>
             </div>
-            <button onClick={addedToDrawer} className={style.button}>
-              <img
-                src={state.isItemAdded(card.id) ? checkedImg : addImg}
-                alt="click"
-              />
-            </button>
+            {state.isItemAdded(card && card.id) ? (
+              <button onClick={removeFromDrawer} className={style.button}>
+                <img src={checkedImg} alt="click" />
+              </button>
+            ) : (
+              <button onClick={addedToDrawer} className={style.button}>
+                <img src={add} alt="click" />
+              </button>
+            )}
           </div>
         </>
       )}

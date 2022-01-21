@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Header = ({ openCart }) => {
   return (
     <header className={style.header}>
-      <Link to="/shoe-shop">
+      <Link to="/">
         <div className={style.headerLeft}>
           <img width={50} height={50} src={logo} alt="logo" />
           <div className={style.headerName}>
@@ -22,10 +22,10 @@ const Header = ({ openCart }) => {
       <ul className={style.headerRight}>
         <li onClick={openCart} className={style.priceBlock}>
           <img src={cart} alt="cart" />
-          <span> "price" $</span>
+          <span>$</span>
         </li>
         <li className={style.favoriteBlock}>
-          <Link to="/shoe-shop/favorite">
+          <Link to="/favorite">
             <img src={favorite} alt="favorite" />
           </Link>
         </li>

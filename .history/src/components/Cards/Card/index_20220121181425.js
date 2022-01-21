@@ -3,7 +3,7 @@ import style from "./Card.module.scss";
 import ContentLoader from "react-content-loader";
 import checkedImg from "img/btnChecked.svg";
 import like from "img/like.svg";
-import addImg from "img/plus.svg";
+import add from "img/plus.svg";
 import liked from "img/liked.png";
 import AppContext from "store/context";
 
@@ -57,10 +57,7 @@ const Card = ({ card, onAddToCart, onAddFavorite, isLoading }) => {
               </p>
             </div>
             <button onClick={addedToDrawer} className={style.button}>
-              <img
-                src={state.isItemAdded(card.id) ? checkedImg : addImg}
-                alt="click"
-              />
+              <img src={state.isItemAdded ? add : checkedImg} alt="click" />
             </button>
           </div>
         </>

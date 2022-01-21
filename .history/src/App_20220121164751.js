@@ -80,14 +80,8 @@ const App = () => {
     }
   };
 
-  const isItemAdded = (id) => {
-    return cartItems.some((item) => item.id === id);
-  };
-
   return (
-    <AppContext.Provider
-      value={{ cards, cartItems, favoritesList, isItemAdded }}
-    >
+    <AppContext.Provider value={{ cards, cartItems, favoritesList }}>
       <div className={style.overlay}>
         <div className={style.wrapper}>
           {cart && (
