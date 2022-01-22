@@ -8,17 +8,13 @@ import { useState } from "react/cjs/react.development";
 import { useContext } from "react";
 import AppContext from "store/context";
 import axios from "axios";
-import { usePrice } from "hooks/usePrice";
 
-const Drawer = ({ closeCart, onRemoveItem }) => {
-  const { cartItems, setCartItems } = useContext(AppContext);
+const Drawer = ({ closeCart, cartItems, onRemoveItem }) => {
+  const state = useContext(AppContext);
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [orderId, setOrderID] = useState(null);
   const [loading, setLoading] = useState(false);
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-  const { totalPrice } = usePrice();
-
   const onSubmitOrder = async () => {
     try {
       setLoading(true);
@@ -28,7 +24,7 @@ const Drawer = ({ closeCart, onRemoveItem }) => {
       );
       setOrderID(response.data.id);
       setIsOrderComplete(true);
-      setCartItems([]);
+      state.setCartItems([]);
 
       for (let i = 0; i < cartItems.length; i++) {
         const item = cartItems[i];
@@ -59,7 +55,7 @@ const Drawer = ({ closeCart, onRemoveItem }) => {
               <ul>
                 <li>
                   <span>Сума:</span>
-                  <b>{totalPrice} $</b>
+                  <b>price$</b>
                 </li>
               </ul>
               <button

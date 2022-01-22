@@ -6,10 +6,10 @@ import style from "./Header.module.scss";
 import favorite from "img/favorite.svg";
 import { Link } from "react-router-dom";
 import AppContext from "store/context";
-import { usePrice } from "hooks/usePrice";
 
 const Header = ({ openCart }) => {
-  const { totalPrice } = usePrice();
+  const state = useContext(AppContext);
+  const totalPrice = state.cartItems.reduce((sum, obj) => obj.price + sum, 0); //sum of cart items
   return (
     <header className={style.header}>
       <Link to="/shoe-shop">

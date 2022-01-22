@@ -6,10 +6,10 @@ import style from "./Header.module.scss";
 import favorite from "img/favorite.svg";
 import { Link } from "react-router-dom";
 import AppContext from "store/context";
-import { usePrice } from "hooks/usePrice";
 
 const Header = ({ openCart }) => {
-  const { totalPrice } = usePrice();
+  const state = useContext(AppContext);
+  console.log("state", state.cartItems);
   return (
     <header className={style.header}>
       <Link to="/shoe-shop">
@@ -25,7 +25,7 @@ const Header = ({ openCart }) => {
       <ul className={style.headerRight}>
         <li onClick={openCart} className={style.priceBlock}>
           <img src={cart} alt="cart" />
-          <span>{totalPrice} $</span>
+          <span> "price" $</span>
         </li>
         <li className={style.favoriteBlock}>
           <Link to="/shoe-shop/favorite">
