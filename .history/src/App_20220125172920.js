@@ -80,15 +80,12 @@ const App = () => {
 
   const onAddFavorite = async (favorite) => {
     try {
-      const fintFav = favoritesList.find(
-        (favObj) => favObj.parentId === favorite.id
-      );
-      if (fintFav) {
+      if (favoritesList.find((favObj) => favObj.parentId === favorite.id)) {
+        axios.delete(
+          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${favorite.id}`
+        );
         setFavoritesList((prev) =>
           prev.filter((item) => item.parentId !== favorite.id)
-        );
-        await axios.delete(
-          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${fintFav.id}`
         );
       } else {
         const response = await axios.post(

@@ -49,7 +49,7 @@ const Card = ({
         <>
           <div onClick={addedToFavorite} className={style.like}>
             {isItemFavorite(id) ? (
-              <img src={liked} alt="liked" />
+              <img src={liked} alt="like" />
             ) : (
               <img src={like} alt="like" />
             )}

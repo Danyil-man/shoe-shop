@@ -84,11 +84,11 @@ const App = () => {
         (favObj) => favObj.parentId === favorite.id
       );
       if (fintFav) {
+        axios.delete(
+          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${fintFav.id}`
+        );
         setFavoritesList((prev) =>
           prev.filter((item) => item.parentId !== favorite.id)
-        );
-        await axios.delete(
-          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${fintFav.id}`
         );
       } else {
         const response = await axios.post(

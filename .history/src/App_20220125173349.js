@@ -87,7 +87,7 @@ const App = () => {
         setFavoritesList((prev) =>
           prev.filter((item) => item.parentId !== favorite.id)
         );
-        await axios.delete(
+        axios.delete(
           `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${fintFav.id}`
         );
       } else {
