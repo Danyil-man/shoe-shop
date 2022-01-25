@@ -59,18 +59,12 @@ const App = () => {
           cartItem
         );
       }
-    } catch {
-      alert("Error");
-    }
+    } catch {}
   };
 
-  const onRemoveItem = async (id) => {
-    try {
-      setCartItems((prev) => prev.filter((item) => item.id !== id));
-      axios.delete(`https://61e553d4595afe00176e54fc.mockapi.io/cart/${id}`);
-    } catch {
-      alert("Error");
-    }
+  const onRemoveItem = (id) => {
+    axios.delete(`https://61e553d4595afe00176e54fc.mockapi.io/cart/${id}`);
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
   const onAddFavorite = async (favorite) => {

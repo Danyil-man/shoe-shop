@@ -68,9 +68,7 @@ const App = () => {
     try {
       setCartItems((prev) => prev.filter((item) => item.id !== id));
       axios.delete(`https://61e553d4595afe00176e54fc.mockapi.io/cart/${id}`);
-    } catch {
-      alert("Error");
-    }
+    } catch {}
   };
 
   const onAddFavorite = async (favorite) => {
