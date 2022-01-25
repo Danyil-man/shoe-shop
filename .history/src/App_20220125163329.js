@@ -58,11 +58,11 @@ const App = () => {
           `https://61e553d4595afe00176e54fc.mockapi.io/cart/${findItem.id}`
         );
       } else {
-        const response = await axios.post(
+        await axios.post(
           "https://61e553d4595afe00176e54fc.mockapi.io/cart",
           cartItem
         );
-        setCartItems((prev) => [...prev, response.data]);
+        setCartItems((prev) => [...prev, cartItem]);
       }
     } catch {
       alert("Error");

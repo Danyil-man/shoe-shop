@@ -51,18 +51,16 @@ const App = () => {
         (favObj) => favObj.parentId === cartItem.id
       );
       if (findItem) {
-        setCartItems((prev) =>
-          prev.filter((item) => item.parentId !== cartItem.id)
-        );
+        setCartItems((prev) => prev.filter((item) => item.id !== cartItem.id));
         await axios.delete(
-          `https://61e553d4595afe00176e54fc.mockapi.io/cart/${findItem.id}`
+          `https://61e553d4595afe00176e54fc.mockapi.io/cart/${cartItem.id}`
         );
       } else {
-        const response = await axios.post(
+        setCartItems((prev) => [...prev, cartItem]);
+        await axios.post(
           "https://61e553d4595afe00176e54fc.mockapi.io/cart",
           cartItem
         );
-        setCartItems((prev) => [...prev, response.data]);
       }
     } catch {
       alert("Error");
