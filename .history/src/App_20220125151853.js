@@ -95,7 +95,7 @@ const App = () => {
   };
 
   const isItemAdded = (id) => {
-    return cartItems.some((item) => item.parentId === id);
+    return cartItems.some((item) => item.id === id);
   };
 
   return (

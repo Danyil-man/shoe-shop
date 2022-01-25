@@ -7,24 +7,15 @@ import addImg from "img/plus.svg";
 import liked from "img/liked.png";
 import AppContext from "store/context";
 
-const Card = ({
-  id,
-  img,
-  price,
-  description,
-  onAddToCart,
-  onAddFavorite,
-  isLoading,
-}) => {
+const Card = ({ card, onAddToCart, onAddFavorite, isLoading }) => {
   const [favorite, setFavorite] = useState(false);
   const state = useContext(AppContext);
-  const cartObj = { id, parentId: id, description, img, price };
   const addToCart = () => {
-    onAddToCart(cartObj);
+    onAddToCart(card);
   };
 
   const addedToFavorite = () => {
-    onAddFavorite(cartObj);
+    onAddFavorite(card);
     setFavorite(!favorite);
   };
 
@@ -55,18 +46,18 @@ const Card = ({
             )}
           </div>
           <div className={style.shoeImgBlock}>
-            <img src={img} alt="cardcroos" />
+            <img src={card.img} alt="cardcroos" />
           </div>
-          <p>{description}</p>
+          <p>{card.description}</p>
           <div className={style.card__content}>
             <div>
               <p>
-                Ціна: <b>{price}$</b>
+                Ціна: <b>{card.price}$</b>
               </p>
             </div>
             <button onClick={addToCart} className={style.button}>
               <img
-                src={state.isItemAdded(id) ? checkedImg : addImg}
+                src={state.isItemAdded(card.id) ? checkedImg : addImg}
                 alt="click"
               />
             </button>

@@ -45,7 +45,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  const onAddToCart = async (cartItem) => {
+  const onAddToCart = async (cartItem, id) => {
     try {
       if (cartItems.find((favObj) => favObj.id === cartItem.id)) {
         setCartItems((prev) => prev.filter((item) => item.id !== cartItem.id));
@@ -95,7 +95,7 @@ const App = () => {
   };
 
   const isItemAdded = (id) => {
-    return cartItems.some((item) => item.parentId === id);
+    return cartItems.some((item) => item.id === id);
   };
 
   return (

@@ -16,7 +16,9 @@ const Cards = ({
 
     return (isLoading ? [...Array(8)] : filter).map((card) => (
       <Card
-        {...card}
+        img={card.img}
+        price={card.price}
+        description={card.description}
         isLoading={isLoading}
         onAddToCart={onAddToCart}
         onAddFavorite={onAddFavorite}

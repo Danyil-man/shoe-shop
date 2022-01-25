@@ -55,18 +55,18 @@ const Card = ({
             )}
           </div>
           <div className={style.shoeImgBlock}>
-            <img src={img} alt="cardcroos" />
+            <img src={card.img} alt="cardcroos" />
           </div>
-          <p>{description}</p>
+          <p>{card.description}</p>
           <div className={style.card__content}>
             <div>
               <p>
-                Ціна: <b>{price}$</b>
+                Ціна: <b>{card.price}$</b>
               </p>
             </div>
             <button onClick={addToCart} className={style.button}>
               <img
-                src={state.isItemAdded(id) ? checkedImg : addImg}
+                src={state.isItemAdded(card.id) ? checkedImg : addImg}
                 alt="click"
               />
             </button>
