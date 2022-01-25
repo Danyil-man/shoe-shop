@@ -100,7 +100,7 @@ const App = () => {
   };
 
   const isItemFavorite = (id) => {
-    return favoritesList.some((item) => item.parentId === id);
+    return favoritesList.some((item) => item.id === id);
   };
 
   const isItemAdded = (id) => {

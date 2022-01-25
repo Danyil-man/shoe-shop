@@ -80,7 +80,7 @@ const App = () => {
 
   const onAddFavorite = async (favorite) => {
     try {
-      if (favoritesList.find((favObj) => favObj.id === favorite.id)) {
+      if (favoritesList.find((favObj) => favObj.parentId === favorite.id)) {
         axios.delete(
           `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${favorite.id}`
         );

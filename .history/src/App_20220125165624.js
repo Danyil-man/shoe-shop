@@ -114,7 +114,6 @@ const App = () => {
         cartItems,
         favoritesList,
         isItemAdded,
-        isItemFavorite,
         setCart,
         setCartItems,
       }}

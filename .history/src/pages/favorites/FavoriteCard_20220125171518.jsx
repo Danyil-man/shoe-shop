@@ -4,17 +4,11 @@ import like from "img/like.svg";
 import liked from "img/liked.png";
 import AppContext from "store/context";
 
-const FavoriteCard = ({
-  id,
-  parentId,
-  img,
-  description,
-  price,
-  onAddFavorite,
-}) => {
+const FavoriteCard = ({ id, img, description, price, onAddFavorite }) => {
   const [favorited, setFavorite] = useState(true);
-  const { isItemFavorite } = useContext(AppContext);
-  const favObj = { id, parentId, img, description, price };
+  const { isItemFavorite, cards } = useContext(AppContext);
+  const favId = cards.map((card) => card.id);
+  const favObj = { id, parentId: id, img, description, price };
   const addedToFavorite = () => {
     onAddFavorite(favObj);
     setFavorite(!favorited);
@@ -23,7 +17,7 @@ const FavoriteCard = ({
     <>
       <div key={id} onClick={addedToFavorite} className={style.card}>
         <div className={style.like}>
-          {isItemFavorite(parentId) ? (
+          {isItemFavorite(id) ? (
             <img src={liked} alt="like" />
           ) : (
             <img src={like} alt="like" />
