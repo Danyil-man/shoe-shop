@@ -43,7 +43,7 @@ const Drawer = ({ closeCart, onRemoveItem, opened }) => {
     setLoading(false);
   };
   return (
-    <div className={`${style.overlay} ${opened ? style.visibleOverley : ""}`}>
+    <div className={style.overlay}>
       <div className={style.drawer}>
         <h2>
           Корзина <img onClick={closeCart} src={remove} alt="remove" />

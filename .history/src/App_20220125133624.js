@@ -21,6 +21,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(isLoading); //Loading
+      console.log("firstLoad", isLoading);
       const responseCart = await axios.get(
         "https://61e553d4595afe00176e54fc.mockapi.io/cart"
       );
@@ -37,6 +38,7 @@ const App = () => {
       setCartItems(responseCart.data);
       setFavoritesList(responseFavorites.data);
       setCards(responseCards.data);
+      console.log("secondLoad", isLoading);
     }
     fetchData();
   }, []);
@@ -96,13 +98,14 @@ const App = () => {
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
-          <Drawer
-            cartItems={cartItems}
-            opened={cart}
-            closeCart={() => setCart(false)}
-            onRemoveItem={onRemoveItem}
-          />
-
+          {cart && (
+            <Drawer
+              cartItems={cartItems}
+              opened={cart}
+              closeCart={() => setCart(true)}
+              onRemoveItem={onRemoveItem}
+            />
+          )}
           <Header openCart={() => setCart(true)} />
           <Route exact path="/shoe-shop/favorite">
             <Favorites onAddFavorite={onAddFavorite} />

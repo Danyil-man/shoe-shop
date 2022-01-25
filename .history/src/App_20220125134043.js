@@ -11,7 +11,7 @@ import AppContext from "store/context";
 import Profile from "pages/profile/Profile";
 
 const App = () => {
-  const [cart, setCart] = useState(false);
+  const [cart, setCart] = useState(true);
   const [cartItems, setCartItems] = useState([]);
   const [cards, setCards] = useState([]);
   const [favoritesList, setFavoritesList] = useState([]);
@@ -21,6 +21,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(isLoading); //Loading
+      console.log("firstLoad", isLoading);
       const responseCart = await axios.get(
         "https://61e553d4595afe00176e54fc.mockapi.io/cart"
       );
@@ -37,6 +38,7 @@ const App = () => {
       setCartItems(responseCart.data);
       setFavoritesList(responseFavorites.data);
       setCards(responseCards.data);
+      console.log("secondLoad", isLoading);
     }
     fetchData();
   }, []);
