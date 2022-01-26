@@ -1,3 +1,4 @@
+import Card from "components/Cards/Card";
 import Response from "components/ResponseComponent/Response";
 import React, { useContext } from "react";
 import AppContext from "store/context";
@@ -5,8 +6,8 @@ import FavoriteCard from "./FavoriteCard";
 import style from "./Favorites.module.scss";
 import noFavorite from "img/noFavorite.png";
 
-const Favorites = () => {
-  const { favoritesList, onAddFavorite } = useContext(AppContext);
+const Favorites = ({ onAddFavorite }) => {
+  const { favoritesList } = useContext(AppContext);
   return (
     <div className={style.wrapper}>
       <h1>My Favorites</h1>

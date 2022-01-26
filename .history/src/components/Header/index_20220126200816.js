@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import AppContext from "store/context";
 import { usePrice } from "Hooks/usePrice";
 
-const Header = () => {
-  const { setCart } = useContext(AppContext);
+const Header = ({ openCart }) => {
   const { totalPrice } = usePrice();
   return (
     <header className={style.header}>
@@ -24,7 +23,7 @@ const Header = () => {
       </Link>
 
       <ul className={style.headerRight}>
-        <li onClick={() => setCart(true)} className={style.priceBlock}>
+        <li onClick={openCart} className={style.priceBlock}>
           <img src={cart} alt="cart" />
           <span>{totalPrice} $</span>
         </li>

@@ -131,7 +131,7 @@ const App = () => {
           <Drawer />
           <Header />
           <Route exact path="/shoe-shop/favorite">
-            <Favorites />
+            <Favorites onAddFavorite={onAddFavorite} />
           </Route>
           <Route exact path="/shoe-shop">
             <Home />

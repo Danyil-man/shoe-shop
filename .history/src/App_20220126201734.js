@@ -114,27 +114,34 @@ const App = () => {
         cart,
         cartItems,
         favoritesList,
-        searchValue,
-        isLoading,
-        setSearchValue,
         isItemAdded,
         isItemFavorite,
         setCart,
         setCartItems,
-        onRemoveItem,
-        onAddToCart,
-        onAddFavorite,
       }}
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
-          <Drawer />
-          <Header />
+          <Drawer
+            closeCart={() => setCart(false)}
+            onRemoveItem={onRemoveItem}
+          />
+
+          <Header openCart={() => setCart(true)} />
           <Route exact path="/shoe-shop/favorite">
-            <Favorites />
+            <Favorites onAddFavorite={onAddFavorite} />
           </Route>
           <Route exact path="/shoe-shop">
-            <Home />
+            <Home
+              searchValue={searchValue}
+              cards={cards}
+              cartItems={cartItems}
+              isLoading={isLoading}
+              onAddToCart={onAddToCart}
+              onAddFavorite={onAddFavorite}
+              setCartItems={setCartItems}
+              setSearchValue={setSearchValue}
+            />
           </Route>
           <Route exact path="/shoe-shop/profile">
             <Profile />

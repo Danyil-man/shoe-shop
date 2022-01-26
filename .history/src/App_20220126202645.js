@@ -131,10 +131,19 @@ const App = () => {
           <Drawer />
           <Header />
           <Route exact path="/shoe-shop/favorite">
-            <Favorites />
+            <Favorites onAddFavorite={onAddFavorite} />
           </Route>
           <Route exact path="/shoe-shop">
-            <Home />
+            <Home
+            // searchValue={searchValue}
+            // cards={cards}
+            // cartItems={cartItems}
+            // isLoading={isLoading}
+            // onAddToCart={onAddToCart}
+            // onAddFavorite={onAddFavorite}
+            // setCartItems={setCartItems}
+            // setSearchValue={setSearchValue}
+            />
           </Route>
           <Route exact path="/shoe-shop/profile">
             <Profile />

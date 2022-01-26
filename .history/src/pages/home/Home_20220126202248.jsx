@@ -7,8 +7,15 @@ import style from "./Home.module.scss";
 const Home = () => {
   return (
     <div className={style.content}>
-      <SearchBlock />
-      <Cards />
+      <SearchBlock searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Cards
+        cards={cards}
+        searchValue={searchValue}
+        isLoading={isLoading}
+        setCartItems={setCartItems}
+        onAddFavorite={onAddFavorite}
+        onAddToCart={onAddToCart}
+      />
     </div>
   );
 };

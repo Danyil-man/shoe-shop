@@ -5,14 +5,19 @@ import { useContext } from "react/cjs/react.development";
 import AppContext from "store/context";
 
 const Cards = () => {
-  const { cards, searchValue, isLoading } = useContext(AppContext);
+  const { cards } = useContext(AppContext);
   const renderItem = () => {
     const filter = cards.filter((card) =>
       card.description.includes(searchValue)
     );
 
     return (isLoading ? [...Array(8)] : filter).map((card) => (
-      <Card {...card} />
+      <Card
+        {...card}
+        isLoading={isLoading}
+        onAddToCart={onAddToCart}
+        onAddFavorite={onAddFavorite}
+      />
     ));
   };
 

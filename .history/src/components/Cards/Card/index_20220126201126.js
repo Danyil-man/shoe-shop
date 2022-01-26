@@ -7,9 +7,16 @@ import addImg from "img/plus.svg";
 import liked from "img/liked.png";
 import AppContext from "store/context";
 
-const Card = ({ id, img, price, description }) => {
-  const { isItemAdded, isItemFavorite, onAddToCart, onAddFavorite, isLoading } =
-    useContext(AppContext);
+const Card = ({
+  id,
+  img,
+  price,
+  description,
+  onAddToCart,
+  onAddFavorite,
+  isLoading,
+}) => {
+  const { isItemAdded, isItemFavorite } = useContext(AppContext);
   const cartObj = { id, parentId: id, description, img, price };
   const addToCart = () => {
     onAddToCart(cartObj);

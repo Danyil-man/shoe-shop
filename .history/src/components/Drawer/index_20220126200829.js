@@ -10,9 +10,8 @@ import AppContext from "store/context";
 import axios from "axios";
 import { usePrice } from "Hooks/usePrice";
 
-const Drawer = () => {
-  const { cartItems, setCartItems, cart, onRemoveItem, setCart } =
-    useContext(AppContext);
+const Drawer = ({ closeCart, onRemoveItem, opened }) => {
+  const { cartItems, setCartItems } = useContext(AppContext);
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [orderId, setOrderID] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,11 +43,10 @@ const Drawer = () => {
     setLoading(false);
   };
   return (
-    <div className={`${style.overlay} ${cart ? style.visibleOverley : ""}`}>
+    <div className={`${style.overlay} ${opened ? style.visibleOverley : ""}`}>
       <div className={style.drawer}>
         <h2>
-          Корзина{" "}
-          <img onClick={() => setCart(false)} src={remove} alt="remove" />
+          Корзина <img onClick={closeCart} src={remove} alt="remove" />
         </h2>
 
         {cartItems.length > 0 ? (

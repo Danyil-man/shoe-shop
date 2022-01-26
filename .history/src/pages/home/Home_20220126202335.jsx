@@ -8,7 +8,14 @@ const Home = () => {
   return (
     <div className={style.content}>
       <SearchBlock />
-      <Cards />
+      <Cards
+        cards={cards}
+        searchValue={searchValue}
+        isLoading={isLoading}
+        setCartItems={setCartItems}
+        onAddFavorite={onAddFavorite}
+        onAddToCart={onAddToCart}
+      />
     </div>
   );
 };
