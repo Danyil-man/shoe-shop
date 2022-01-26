@@ -16,8 +16,8 @@ const FavoriteCard = ({
   const { isItemFavorite } = useContext(AppContext);
   const favObj = { id, parentId: id, img, description, price };
   const addedToFavorite = () => {
-    isItemFavorite(id);
     onAddFavorite(favObj);
+    isItemFavorite(id);
     setIsFavorite(!isFavorited);
   };
   return (

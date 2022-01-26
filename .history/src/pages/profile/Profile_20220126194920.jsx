@@ -3,7 +3,6 @@ import Orders from "components/orders/Orders";
 import Response from "components/responseComponent/Response";
 import React, { useEffect, useState } from "react";
 import style from "./Profile.module.scss";
-import noOrders from "../../img/noOrders.png";
 
 const Profile = () => {
   const [orders, setOrders] = useState([]);
@@ -20,6 +19,11 @@ const Profile = () => {
       } catch {
         alert("Error");
       }
+
+      // console.log(
+      //   response.data.map((obj) => obj.items).flat()
+      //   response.data.reduce((prev, obj) => [...prev, ...obj.items], [])
+      // );
     }
     fetchOrders();
   }, []);
@@ -35,11 +39,7 @@ const Profile = () => {
             ))}
           </>
         ) : (
-          <Response
-            title="No orders"
-            description="Come back to buy something"
-            img={noOrders}
-          />
+          <Response />
         )}
       </div>
     </div>

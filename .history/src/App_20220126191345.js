@@ -86,7 +86,7 @@ const App = () => {
           prev.filter((item) => item.id !== favorite.id)
         );
         await axios.delete(
-          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${favorite.id}`
+          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${findFav.id}`
         );
       } else {
         const response = await axios.post(

@@ -7,7 +7,7 @@ import { useState } from "react/cjs/react.development";
 const SearchBlock = ({ searchValue, setSearchValue }) => {
   return (
     <div className={style.headCard}>
-      <h1>{searchValue ? `Search on: '${searchValue}'` : "All sneakers"}</h1>
+      <h1>{searchValue ? `Search on: '${searchValue}'` : "Всі кросівки"}</h1>
       <div className={style.searchBlock}>
         <img src={search} alt="Search" />
 

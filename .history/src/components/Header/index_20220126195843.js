@@ -17,7 +17,7 @@ const Header = ({ openCart }) => {
           <img width={50} height={50} src={logo} alt="logo" />
           <div className={style.headerName}>
             <h3 className={style.textupper}>React Shoes</h3>
-            <p>Shoe Store</p>
+            <p>Shoe Shop</p>
           </div>
         </div>
       </Link>

@@ -23,6 +23,7 @@ const Card = ({
   };
 
   const addedToFavorite = () => {
+    isItemFavorite(id);
     onAddFavorite(cartObj);
   };
 
@@ -55,7 +56,7 @@ const Card = ({
           <div className={style.card__content}>
             <div>
               <p>
-                Price: <b>{price}$</b>
+                Ціна: <b>{price}$</b>
               </p>
             </div>
             <button onClick={addToCart} className={style.button}>

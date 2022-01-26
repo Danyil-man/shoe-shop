@@ -1,9 +1,7 @@
 import axios from "axios";
 import Orders from "components/orders/Orders";
-import Response from "components/responseComponent/Response";
 import React, { useEffect, useState } from "react";
 import style from "./Profile.module.scss";
-import noOrders from "../../img/noOrders.png";
 
 const Profile = () => {
   const [orders, setOrders] = useState([]);
@@ -20,6 +18,11 @@ const Profile = () => {
       } catch {
         alert("Error");
       }
+
+      // console.log(
+      //   response.data.map((obj) => obj.items).flat()
+      //   response.data.reduce((prev, obj) => [...prev, ...obj.items], [])
+      // );
     }
     fetchOrders();
   }, []);
@@ -29,18 +32,14 @@ const Profile = () => {
       <h1>My Orders </h1>
       <div className={style.sneakers__content}>
         {orders.length > 0 ? (
-          <>
-            {(isLoading ? [...Array(8)] : orders).map((order) => (
-              <Orders order={order} loading={isLoading} />
-            ))}
-          </>
+<>
+{(isLoading ? [...Array(8)] : orders).map((order) => (
+          <Orders order={order} loading={isLoading} />
+        ))}</>
         ) : (
-          <Response
-            title="No orders"
-            description="Come back to buy something"
-            img={noOrders}
-          />
+
         )}
+        
       </div>
     </div>
   );

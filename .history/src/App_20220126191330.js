@@ -83,10 +83,10 @@ const App = () => {
       const findFav = favoritesList.find((favObj) => favObj.id === favorite.id);
       if (findFav) {
         setFavoritesList((prev) =>
-          prev.filter((item) => item.id !== favorite.id)
+          prev.filter((item) => item.parentId !== favorite.id)
         );
         await axios.delete(
-          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${favorite.id}`
+          `https://61e553d4595afe00176e54fc.mockapi.io/favorites/${findFav.id}`
         );
       } else {
         const response = await axios.post(

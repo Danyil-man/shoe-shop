@@ -7,24 +7,23 @@ import AppContext from "store/context";
 const FavoriteCard = ({
   id,
   img,
-  favorited = false,
+  parentId,
   description,
   price,
   onAddFavorite,
 }) => {
-  const [isFavorited, setIsFavorite] = useState(favorited);
+  const [favorited, setFavorite] = useState(true);
   const { isItemFavorite } = useContext(AppContext);
   const favObj = { id, parentId: id, img, description, price };
   const addedToFavorite = () => {
-    isItemFavorite(id);
     onAddFavorite(favObj);
-    setIsFavorite(!isFavorited);
+    setFavorite(!favorited);
   };
   return (
     <>
-      <div key={id} className={style.card}>
-        <div onClick={addedToFavorite} className={style.like}>
-          <img src={isFavorited ? liked : like} alt="favorite" />
+      <div key={id} onClick={addedToFavorite} className={style.card}>
+        <div className={style.like}>
+          <img src={favorited ? liked : like} alt="favorite" />
         </div>
         <div className={style.shoeImgBlock}>
           <img width={160} src={img} alt="cardcroos" />

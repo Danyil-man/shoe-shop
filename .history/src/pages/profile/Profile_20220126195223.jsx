@@ -20,6 +20,11 @@ const Profile = () => {
       } catch {
         alert("Error");
       }
+
+      // console.log(
+      //   response.data.map((obj) => obj.items).flat()
+      //   response.data.reduce((prev, obj) => [...prev, ...obj.items], [])
+      // );
     }
     fetchOrders();
   }, []);

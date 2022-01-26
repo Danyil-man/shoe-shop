@@ -16,6 +16,7 @@ const Card = ({
   onAddFavorite,
   isLoading,
 }) => {
+  const [favorite, setFavorite] = useState(false);
   const { isItemAdded, isItemFavorite } = useContext(AppContext);
   const cartObj = { id, parentId: id, description, img, price };
   const addToCart = () => {
@@ -23,7 +24,9 @@ const Card = ({
   };
 
   const addedToFavorite = () => {
+    isItemFavorite(cartObj.id);
     onAddFavorite(cartObj);
+    //setFavorite(!favorite);
   };
 
   return (
@@ -44,9 +47,13 @@ const Card = ({
           <rect x="124" y="230" rx="10" ry="10" width="32" height="32" />
         </ContentLoader>
       ) : (
-        <div key={id}>
+        <>
           <div onClick={addedToFavorite} className={style.like}>
-            <img src={isItemFavorite(id) ? liked : like} alt="liked" />
+            {isItemFavorite(id) ? (
+              <img src={liked} alt="liked" />
+            ) : (
+              <img src={like} alt="like" />
+            )}
           </div>
           <div className={style.shoeImgBlock}>
             <img src={img} alt="cardcroos" />
@@ -55,14 +62,14 @@ const Card = ({
           <div className={style.card__content}>
             <div>
               <p>
-                Price: <b>{price}$</b>
+                Ціна: <b>{price}$</b>
               </p>
             </div>
             <button onClick={addToCart} className={style.button}>
               <img src={isItemAdded(id) ? checkedImg : addImg} alt="click" />
             </button>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

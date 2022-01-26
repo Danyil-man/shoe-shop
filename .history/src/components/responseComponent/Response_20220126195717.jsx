@@ -14,7 +14,7 @@ const Response = ({ title, description, img }) => {
         <h2>{title}</h2>
         <p>{description}</p>
         <Link to="/shoe-shop">
-          <button onClick={() => setCart(false)}>Go back</button>
+          <button onClick={() => setCart(false)}>Вернутися назад</button>
         </Link>
       </div>
     </>
