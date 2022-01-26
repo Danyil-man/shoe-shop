@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/shoe-shop/static/css/main.4aa853cd.chunk.css",
-    "main.js": "/shoe-shop/static/js/main.4a07a3b6.chunk.js",
-    "main.js.map": "/shoe-shop/static/js/main.4a07a3b6.chunk.js.map",
+    "main.css": "/shoe-shop/static/css/main.3fed093f.chunk.css",
+    "main.js": "/shoe-shop/static/js/main.5a9455d6.chunk.js",
+    "main.js.map": "/shoe-shop/static/js/main.5a9455d6.chunk.js.map",
     "runtime-main.js": "/shoe-shop/static/js/runtime-main.de350395.js",
     "runtime-main.js.map": "/shoe-shop/static/js/runtime-main.de350395.js.map",
-    "static/js/2.6f2df5e8.chunk.js": "/shoe-shop/static/js/2.6f2df5e8.chunk.js",
-    "static/js/2.6f2df5e8.chunk.js.map": "/shoe-shop/static/js/2.6f2df5e8.chunk.js.map",
+    "static/js/2.546d4db9.chunk.js": "/shoe-shop/static/js/2.546d4db9.chunk.js",
+    "static/js/2.546d4db9.chunk.js.map": "/shoe-shop/static/js/2.546d4db9.chunk.js.map",
     "index.html": "/shoe-shop/index.html",
-    "static/css/main.4aa853cd.chunk.css.map": "/shoe-shop/static/css/main.4aa853cd.chunk.css.map",
-    "static/js/2.6f2df5e8.chunk.js.LICENSE.txt": "/shoe-shop/static/js/2.6f2df5e8.chunk.js.LICENSE.txt",
+    "static/css/main.3fed093f.chunk.css.map": "/shoe-shop/static/css/main.3fed093f.chunk.css.map",
+    "static/js/2.546d4db9.chunk.js.LICENSE.txt": "/shoe-shop/static/js/2.546d4db9.chunk.js.LICENSE.txt",
     "static/media/btnChecked.b9b03b04.svg": "/shoe-shop/static/media/btnChecked.b9b03b04.svg",
     "static/media/cart1.088b5dd7.svg": "/shoe-shop/static/media/cart1.088b5dd7.svg",
     "static/media/favorite.fb6fc173.svg": "/shoe-shop/static/media/favorite.fb6fc173.svg",
     "static/media/like.296194ce.svg": "/shoe-shop/static/media/like.296194ce.svg",
+    "static/media/noFavorite.d2da5cb1.png": "/shoe-shop/static/media/noFavorite.d2da5cb1.png",
+    "static/media/noOrders.4bd9b18c.png": "/shoe-shop/static/media/noOrders.4bd9b18c.png",
     "static/media/orderConfirmed.05b20ff1.png": "/shoe-shop/static/media/orderConfirmed.05b20ff1.png",
     "static/media/plus.503fc6fb.svg": "/shoe-shop/static/media/plus.503fc6fb.svg",
     "static/media/remove.1cddb58d.svg": "/shoe-shop/static/media/remove.1cddb58d.svg",
@@ -21,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.de350395.js",
-    "static/js/2.6f2df5e8.chunk.js",
-    "static/css/main.4aa853cd.chunk.css",
-    "static/js/main.4a07a3b6.chunk.js"
+    "static/js/2.546d4db9.chunk.js",
+    "static/css/main.3fed093f.chunk.css",
+    "static/js/main.5a9455d6.chunk.js"
   ]
 }
