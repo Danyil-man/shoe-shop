@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  position: relative;
   img {
     margin-right: 15px;
   }
@@ -15,8 +14,7 @@
   }
   .removebtn {
     opacity: 0.6;
-    position: absolute;
-    right: 0;
+
     cursor: pointer;
     &:hover {
       opacity: 1;

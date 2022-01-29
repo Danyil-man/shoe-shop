@@ -74,7 +74,7 @@ const Drawer = () => {
           </div>
         ) : (
           <Response
-            title={isOrderComplete ? "Order confirmed" : "The cart is empty"}
+            title={isOrderComplete ? "Order confirmed" : "Корзина пуста"}
             description={
               isOrderComplete
                 ? `Your order №${orderId} will be delivered to the courier`

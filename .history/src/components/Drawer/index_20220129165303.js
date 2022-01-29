@@ -47,7 +47,8 @@ const Drawer = () => {
     <div className={`${style.overlay} ${cart ? style.visibleOverley : ""}`}>
       <div className={style.drawer}>
         <h2>
-          Cart <img onClick={() => setCart(false)} src={remove} alt="remove" />
+          Корзина{" "}
+          <img onClick={() => setCart(false)} src={remove} alt="remove" />
         </h2>
 
         {cartItems.length > 0 ? (
@@ -74,11 +75,11 @@ const Drawer = () => {
           </div>
         ) : (
           <Response
-            title={isOrderComplete ? "Order confirmed" : "The cart is empty"}
+            title={isOrderComplete ? "Заказ оформлено" : "Корзина пуста"}
             description={
               isOrderComplete
-                ? `Your order №${orderId} will be delivered to the courier`
-                : "Add at least one pair of sneakers to make an order"
+                ? `Ваше замовлення №${orderId} буде передано кур'єру`
+                : "Добавте хоча б одну пару кросівок, щоб зробити замовлення"
             }
             img={isOrderComplete ? orderCompeleteImg : emptyCart}
           />
