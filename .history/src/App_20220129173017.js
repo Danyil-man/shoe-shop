@@ -129,7 +129,7 @@ const App = () => {
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
-          <PageRouting />
+          <Drawer />
         </div>
       </div>
     </AppContext.Provider>

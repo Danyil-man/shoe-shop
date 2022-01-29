@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import Favorites from "pages/favorites/Favorites";
 import AppContext from "store/context";
 import Profile from "pages/profile/Profile";
-import PageRouting from "routing/routing";
 
 const App = () => {
   const [cart, setCart] = useState(false);
@@ -129,7 +128,16 @@ const App = () => {
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
-          <PageRouting />
+          <Drawer />
+          <Header />
+          <Route exact path="/favorite">
+            <Favorites />
+          </Route>
+          <Route exact path="/" component={Home} />
+          {/* <Home /> */}
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
         </div>
       </div>
     </AppContext.Provider>

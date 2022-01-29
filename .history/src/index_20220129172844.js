@@ -8,6 +8,7 @@ import PageRouting from "routing/routing";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <PageRouting />
   </React.StrictMode>,
   document.getElementById("root")
 );

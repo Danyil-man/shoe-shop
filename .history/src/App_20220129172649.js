@@ -129,6 +129,8 @@ const App = () => {
     >
       <div className={style.overlay}>
         <div className={style.wrapper}>
+          <Drawer />
+          <Header />
           <PageRouting />
         </div>
       </div>
