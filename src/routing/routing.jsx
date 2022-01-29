@@ -12,7 +12,7 @@ const PageRouting = () => {
       <Drawer />
       <Header />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/shoe-shop" component={Home} />
         <Route exact path="/favorite" component={Favorites} />
         <Route exact path="/profile" component={Profile} />
       </Switch>
