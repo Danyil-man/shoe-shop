@@ -1,13 +1,14 @@
-import remove from "../../img/remove.svg";
+import remove from "img/remove.svg";
 import style from "./Drawe.module.scss";
-import emptyCart from "../../img/emptyCart.png";
-import orderCompeleteImg from "../../img/orderConfirmed.png";
-import { useContext, useState } from "react";
+import CartItem from "components/Cart";
+import emptyCart from "img/emptyCart.png";
+import orderCompeleteImg from "img/orderConfirmed.png";
+import Response from "components/ResponseComponent/Response";
+import { useState } from "react/cjs/react.development";
+import { useContext } from "react";
 import axios from "axios";
 import { usePrice } from "../../Hooks/usePrice";
 import AppContext from "../../store/context";
-import CartItem from "../Cart";
-import Response from "../ResponseComponent/Response";
 
 const Drawer = () => {
   const { cartItems, setCartItems, cart, onRemoveItem, setCart } =

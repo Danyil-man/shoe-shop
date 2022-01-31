@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import style from "./FavoriteCard.module.scss";
-import like from "../../img/like.svg";
-import liked from "../../img/liked.png";
+import like from "img/like.svg";
+import liked from "img/liked.png";
 import AppContext from "../../store/context";
 
 const FavoriteCard = ({ id, img, favorited = false, description, price }) => {
@@ -25,7 +25,7 @@ const FavoriteCard = ({ id, img, favorited = false, description, price }) => {
         <div className={style.card__content}>
           <div>
             <p>
-              Price: <b>{price}$</b>
+              Ціна: <b>{price}$</b>
             </p>
           </div>
         </div>

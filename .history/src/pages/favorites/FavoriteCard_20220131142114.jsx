@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import style from "./FavoriteCard.module.scss";
-import like from "../../img/like.svg";
-import liked from "../../img/liked.png";
+import like from "img/like.svg";
+import liked from "img/liked.png";
 import AppContext from "../../store/context";
 
 const FavoriteCard = ({ id, img, favorited = false, description, price }) => {

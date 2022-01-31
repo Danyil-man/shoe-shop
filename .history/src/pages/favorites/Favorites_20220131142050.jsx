@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import style from "./Favorites.module.scss";
-import noFavorite from "../../img/noFavorite.png";
+import noFavorite from "img/noFavorite.png";
 import FavoriteCard from "./FavoriteCard";
 import AppContext from "../../store/context";
 import Response from "../../components/ResponseComponent/Response";

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import style from "./Cards.module.scss";
 import Card from "./Card";
-import AppContext from "../../store/context";
+
+import AppContext from "store/context";
 
 const Cards = () => {
   const { cards, searchValue, isLoading } = useContext(AppContext);

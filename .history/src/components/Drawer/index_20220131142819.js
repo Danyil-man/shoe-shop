@@ -1,7 +1,7 @@
 import remove from "../../img/remove.svg";
 import style from "./Drawe.module.scss";
 import emptyCart from "../../img/emptyCart.png";
-import orderCompeleteImg from "../../img/orderConfirmed.png";
+import orderCompeleteImg from "img/orderConfirmed.png";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { usePrice } from "../../Hooks/usePrice";

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./index.module.scss";
 import axios from "axios";
-import AppContext from "./store/context";
-import PageRouting from "./routing";
 
 const App = () => {
   const [cart, setCart] = useState(false);

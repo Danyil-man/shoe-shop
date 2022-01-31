@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import search from "../../img/search.png";
+import search from "img/search.png";
 import style from "./SearchBlock.module.scss";
-import remove from "../../img/remove.svg";
+import remove from "img/remove.svg";
 import AppContext from "../../store/context";
 
 const SearchBlock = () => {

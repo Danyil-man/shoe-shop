@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import style from "./Profile.module.scss";
-import noOrders from "../../img/noOrders.png";
+import noOrders from "img/noOrders.png";
 import Orders from "../../components/Orders/Orders";
 import Response from "../../components/ResponseComponent/Response";
 

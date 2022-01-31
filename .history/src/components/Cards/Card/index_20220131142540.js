@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import style from "./Card.module.scss";
 import ContentLoader from "react-content-loader";
-import checkedImg from "../../../img/btnChecked.svg";
-import like from "../../../img/like.svg";
-import addImg from "../../../img/plus.svg";
-import liked from "../../../img/liked.png";
+import checkedImg from "img/btnChecked.svg";
+import like from "img/like.svg";
+import addImg from "img/plus.svg";
+import liked from "img/liked.png";
 import AppContext from "../../../store/context";
 
 const Card = ({ id, img, price, description }) => {

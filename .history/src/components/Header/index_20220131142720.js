@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import logo from "../../img/headlogo.png";
+import logo from "img/headlogo.png";
 import cart from "../../img/cart1.svg";
-import user from "../../img/user.svg";
+import user from "img/user.svg";
 import style from "./Header.module.scss";
-import favorite from "../../img/favorite.svg";
+import favorite from "img/favorite.svg";
 import { Link } from "react-router-dom";
 import AppContext from "../../store/context";
 import { usePrice } from "../../Hooks/usePrice";
