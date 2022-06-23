@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import style from "./Response.module.scss";
-import AppContext from "store/context";
 import { Link } from "react-router-dom";
+import AppContext from "../../store/context";
 
 const Response = ({ title, description, img }) => {
   const { setCart } = useContext(AppContext);
